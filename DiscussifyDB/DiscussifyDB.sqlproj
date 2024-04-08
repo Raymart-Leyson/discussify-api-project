@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="0.1.3-preview" />
+  <PropertyGroup>
+    <Name>BlogDatabase</Name>
+    <ProjectGuid>{b93797b2-365a-43a8-a0f9-5b78fdaf1f70}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Tables\.gitkeep" />
+    <None Include="Dockerfile" />
+    <None Include="DiscussifyDB.publish.xml" />
+    <None Include="DiscussifyDB_1.publish.xml" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+  <ItemGroup>
+    <Build Remove="Scripts\**" />
+    <Build Include="Tables\Message.sql" />
+    <Build Include="Tables\User.sql" />
+    <Build Include="Tables\Room.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tables\" />
+  </ItemGroup>
+</Project>

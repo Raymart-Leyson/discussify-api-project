@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[Anonymous]
+(
+  [Id] BIGINT NOT NULL PRIMARY KEY IDENTITY,
+  [RoomId] BIGINT NOT NULL,
+  [Name] NVARCHAR(255) NOT NULL,
+  [DateTimeCreated] DATETIME NOT NULL,
+  CONSTRAINT [FK_RoomAnonymous] FOREIGN KEY ([RoomId]) REFERENCES [dbo].[Room]([Id]) ON DELETE CASCADE
+)
+GO

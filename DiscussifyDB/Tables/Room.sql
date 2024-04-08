@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Room] 
+(
+    [Id] BIGINT NOT NULL PRIMARY KEY IDENTITY,
+	[UserId] BIGINT NOT NULL,
+    [Name] NVARCHAR (30) NOT NULL,
+	[Code] NVARCHAR (11) NOT NULL,
+	[DateTimeCreated] DATETIME NOT NULL,
+	[DateTimeUpdated] DATETIME NOT NULL,
+	CONSTRAINT FK_RoomUser FOREIGN KEY ([UserId]) REFERENCES [dbo].[User](Id)
+)
+GO
