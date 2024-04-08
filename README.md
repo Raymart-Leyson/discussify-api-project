@@ -13,8 +13,8 @@
 ### Prepared by:
 Group 5 - F1
 
-**Xavier David Maranga** \
-**Sly Kint Bacalso** \
-**Raymart Leyson** \
-**Raul Jay Yanson** \
-**Chlarence Callelero** 
+**Xavier David Maranga (FrontEnd)** \
+**Sly Kint Bacalso (BackEnd)** \
+**Raymart Leyson (BackEnd)** \
+**Raul Jay Yanson (FrontEnd)** \
+**Chlarence Callelero (FrontEnd)** 
